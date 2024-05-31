@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Conservation Biology">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Deronia - Lithium">
+    <meta name="viewport" content="">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a id="about" href="about.html">About Us</a></li>
+            <li><a id="conservationBio" href="understanding.html">Understanding Conservation Biology</a></li>
+            <li><a id="sources" href="sources.html"> Sources</a></li>
+            <li><a id="home" href="index.html">Home</a></li>
+        </ul>
+
+        <img src="logo.png" alt="" class="logo">
+
+        <h1> Republic of the Philippines <br>
+            Conservation Biology <br>
+            Protecting biodiversity and ecosystems.
+        </h1>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="bio">
+        <h2>Conservation and sustainable use of biodiversity</h2>
+        <p>
+            Biodiversity is currently being lost at up to 1,000 times the natural rate. Some scientists are now referring to the crisis 
+            as the ‘Earth’s sixth mass extinction’, comparable to the last great extinction crisis 65 million years ago. These extinctions
+            are irreversible and pose a serious threat to our health and wellbeing. Designation and management of protected areas is the 
+            cornerstone of biodiversity conservation. However, despite an increase in the total number of protected areas in the world, 
+            biodiversity continues to decline.
+        </p>
+        <p>
+            An integrated landscape approach to conservation planning plays a key role in ensuring suitable habitats for species. However, 
+            many protected areas are not functioning as effectively as originally intended, due in part to limited resources to maintain 
+            these areas and/or enforce relevant legal frameworks. In addition, current protected area networks may need to be re-aligned to 
+            account for climate change. Efforts to preserve biodiversity must take into account not only the physical environment, but also 
+            social and economic systems that are well connected to biodiversity and ecosystem services. For protected areas to contribute 
+            effectively to a secure future for biodiversity, there is a need for measures to enhance the representativeness of networks, and
+            to improve management effectiveness.
+        </p>
+    </section>
+
+    <div class="slideshow-container"> 
+        <div class="Slides fade">
+            <img src="pic1.jpg" style="width:100%">
+        </div>
+
+        <div class="Slides fade">
+            <img src="pic2.jpg" style="width:100%">
+        </div>
+
+        <div class="Slides fade">
+            <img src="pic3.jpg" style="width:100%">
+        </div>
+    </div>
+
+    <div class="dots">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</main>
+
+<body>
+    <div class="footer">
+        <p>&copy; 2024 Conservation Biology</p>
+    </div>  
+</body>
+
+<script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("Slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1}    
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+            setTimeout(showSlides, 2000); 
+        }
+
+        function currentSlide(n) {
+            let i;
+            let slides = document.getElementsByClassName("Slides");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[n-1].style.display = "block";  
+            dots[n-1].className += " active";
+        }
+    </script>
+<style>
+    body {
+        background-image: url(background2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        position:relative;
+        opacity: 1;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Montserrat';
+        position: sticky;
+        top: 0;
+        text-decoration: none;
+    }
+
+    #sources {
+        position: relative;
+    }
+
+    #sources:after {
+        content: '';
+        height: 6.3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #002D04;
+        transition: 0.5s;
+    }
+
+    #sources:hover:after {
+        width: 100%;
+    }
+
+    #conservationBio {
+        position: relative;
+    }
+
+    #conservationBio:after {
+        content: '';
+        height: 6.3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #002D04;
+        transition: 0.5s;
+    }
+
+    #conservationBio:hover:after {
+        width: 100%;
+    }
+
+    #about {
+        position: relative;
+    }
+
+    #about:after {
+        content: '';
+        height: 6.3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #002D04;
+        transition: 0.5s;
+    }
+
+    #about:hover:after {
+        width: 97%;
+    }
+
+    #home {
+        position: relative;
+    }
+
+    #home:after {
+        content: '';
+        height: 6.3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #002D04;
+        transition: 0.5s;
+    }
+
+    #home:hover:after {
+        width: 98%;
+    }
+
+    li {
+        display: inline;
+        float: right;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    li a {
+        margin-right: 30px;
+        padding-top: 20px;
+        color: rgb(0, 0, 0);
+        border: 1px;
+        float: right;
+        text-decoration: none;
+    }
+
+    .logo {
+        border: 1px;
+        padding-right: 5px;
+        height: 65px;
+        float: left;
+        margin-top: -40px;
+        margin-left: 20px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px auto;
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    .bio {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 25px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: -15px;
+        margin-right: 250px;
+        text-align: justify;
+    }
+
+    h1 {
+        float: left;
+        margin-top: -38px;
+        border: 1px;
+        font-family: 'Montserrat';
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        font-weight: lighter;
+        text-align: justify;
+    }
+
+    nav {
+        overflow: hidden;
+        width: 100%;
+        position: fixed;
+        margin-left: -8px;
+        z-index: 1000;
+        top: 0px;
+        height: 99px;
+        background: linear-gradient(180deg, rgba(159,255,132,0.9136904761904762) 0%, rgba(196,255,120,1) 0%, rgba(67,176,65,1) 91%);
+    }
+
+    .slideshow-container {
+        max-width: 200px;
+        position: inherit;
+        margin-top: 5px;
+        margin-left: -735px;
+        margin-bottom: 55px;
+    }
+
+    .Slides {
+        display: none;
+        position: absolute;
+        width: 50%;
+        margin-left: auto;
+    }
+
+    @keyframes fade {
+        from {
+            opacity: 0.4
+        }
+        to {
+            opacity: 1
+        }
+    }
+
+    .dots {
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+    }
+
+    .dot.active {
+        background-color: #717171;
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(159,255,132,0.9136904761904762) 0%, rgba(196,255,120,1) 0%, rgba(67,176,65,1) 91%);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        fill-opacity: inherit;
+        font-family: 'Montserrat';
+    }
+</style>
+
+</html>

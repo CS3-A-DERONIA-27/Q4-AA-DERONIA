@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="CS WEB">
+    <meta name="keywords" content="HTML">
+    <meta name="author" content="Arriane">
+    <meta name="viewport" content="">
+    
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="signin" href="signup.html"> Sign In </a></li>
+                <li><a id="projects" href="admission.html">Projects and Resources</a></li>
+                <li><a id="conservationBio" href="contacts.html">Understanding Conservation Biology</a></li>
+                <li><a id="about" href="about.html">About Us</a></li>
+                <li><a id="home" href="index.html">Home</a></li>
+            </ul>
+
+            <img src="logo.png" alt="" class="logo">
+
+            <h1> Republic of the Philippines <br>
+                Conservation Biology <br>
+                Protecting biodiversity and ecosystems.
+            </h1>
+        </nav>
+    </header>
+
+    <div class="box">
+        <h2>Sign Up</h2>
+        <p> Input your Google Account</p>
+
+        <form>
+            <div class="inputBox">
+                <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
+                <label>Username</label>
+            </div>
+
+            <div class="inputBox">
+                <input type="text" name="text" required onkeyup="this.setAttribute('value', this.value);" value="">
+                <label>Password</label>
+            </div>
+
+            <input type="submit" name="sign-in" value="Sign In">
+        </form>
+
+    </div>
+    <div class="footer">
+        <p>waa</p>
+    </div>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-size: cover;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .box {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30rem;
+            padding: 3.5rem;
+            box-sizing: border-box;
+            border: 1px solid #dadce0;
+            -webkit-border-radius: 8px;
+            border-radius: 8px;
+        }
+
+        .box h2 {
+            margin: 0px 0 -0.125rem;
+            padding: 0;
+            text-align: center;
+            color: #202124;
+            font-size: 24px;
+            font-weight: 400;
+        }
+
+        .box .logo {
+            flex-direction: row;
+            justify-content: center;
+            margin-bottom: 16px;
+            height: 90px;
+            float: center;
+        }
+
+        .box p {
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .box .inputBox {
+            position: relative;
+        }
+
+        .box .inputBox input {
+            width: 93%;
+            padding: 1.3rem 10px;
+            font-size: 1rem;
+            letter-spacing: 0.062rem;
+            margin-bottom: 1.875rem;
+            border: 1px solid #ccc;
+            background: transparent;
+            border-radius: 4px;
+        }
+
+        .box .inputBox label {
+            position: absolute;
+            top: 0;
+            left: 10px;
+            padding: 0.625rem 0;
+            font-size: 1rem;
+            color: gray;
+            pointer-events: none;
+            transition: 0.5s;
+        }
+
+        .box .inputBox input:focus~label,
+        .box .inputBox input:valid~label,
+        .box .inputBox input:not([value=""])~label {
+            top: -1.125rem;
+            left: 10px;
+            color: #1a73e8;
+            font-size: 0.75rem;
+            background-color: #fff;
+            height: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .box .inputBox input:focus {
+            outline: none;
+            border: 2px solid #1a73e8;
+        }
+
+        .box input[type="submit"] {
+            border: none;
+            outline: none;
+            color: #fff;
+            background-color: #1a73e8;
+            padding: 0.625rem 1.25rem;
+            cursor: pointer;
+            border-radius: 0.312rem;
+            font-size: 1rem;
+            float: right;
+        }
+
+        .box input[type="submit"]:hover {
+            background-color: #287ae6;
+            box-shadow: 0 1px 1px 0 rgba(66, 133, 244, 0.45), 0 1px 3px 1px rgba(66, 133, 244, 0.3);
+        }
+
+        /* Navigation Bar and Footer */
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            font-family: 'Montserrat';
+            position: sticky;
+            top: 0;
+            text-decoration: none;
+        }
+
+        #projects, #conservationBio, #about, #home, #signin {
+            position: relative;
+        }
+
+        #projects:after, #conservationBio:after, #about:after, #home:after, #signin:after {
+            content: '';
+            height: 6.3px;
+            width: 0;
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            background-color: #002D04;
+            transition: 0.5s;
+        }
+
+        #projects:hover:after, #conservationBio:hover:after, #about:hover:after, #home:hover:after, #signin:hover:after {
+            width: 100%;
+        }
+
+        li {
+            display: inline;
+            float: right;
+            margin-top: 20px;
+            font-size: 15px;
+        }
+
+        li a {
+            margin-right: 30px;
+            padding-top: 20px;
+            color: rgb(0, 0, 0);
+            border: 1px;
+            float: right;
+            text-decoration: none;
+        }
+
+        .logo {
+            border: 1px;
+            padding-right: 5px;
+            height: 65px;
+            float: left;
+            margin-top: -40px;
+            margin-left: 20px;
+        }
+
+        h1 {
+            float: left;
+            margin-top: -38px;
+            border: 1px;
+            font-family: 'Montserrat';
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+            font-weight: lighter;
+        }
+
+        nav {
+            overflow: hidden;
+            width: 100%;
+            position: fixed;
+            margin-left: -8px;
+            top: 0px;
+            height: 99px;
+            background: linear-gradient(180deg, rgba(159, 255, 132, 0.9136904761904762) 0%, rgba(196, 255, 120, 1) 0%, rgba(67, 176, 65, 1) 91%);
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background: linear-gradient(180deg, rgba(159, 255, 132, 0.9136904761904762) 0%, rgba(196, 255, 120, 1) 0%, rgba(67, 176, 65, 1) 91%);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            fill-opacity: inherit;
+            font-family: 'Montserrat';
+        }
+    </style>
+</body>
+
+<script>
+    if (localStorage.getItem('user')) { //checks the user's data
+        const isuser = localStorage.getItem('user');//retrieve the value
+
+        if (isuser === 'true') {
+            window.location.href = 'understanding.html';
+        }
+    }
+
+    function login() {
+        localStorage.setItem('user', 'true');
+
+        window.location.href = 'understanding.html';
+    }
+</script>
+
+</html>

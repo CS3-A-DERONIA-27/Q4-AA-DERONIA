@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Conservation Biology">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Deronia - Lithium">
+    <meta name="viewport" content="">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a id="signin" href="signup.html"> Sign In</a></li>
+            <li><a id="about" href="about.html">About us</a></li>
+            <li><a id="conservationBio" href="understanding.html">Understanding Conservation Biology</a></li>
+            <li><a id="sources" href="sources.html">Sources </a></li>
+            <li><a id="home" href="index.html">Home</a></li> 
+        </ul>
+
+        <img src="logo.png" alt="" class="logo">
+
+        <h1> Republic of the Philippines <br>
+            Conservation Biology <br>
+            Protecting biodiversity and ecosystems.
+        </h1>
+    </nav>
+</header>
+
+<main class="container">
+    <section class="web-of-life">
+        <div class="text">
+            <h2>From Forests to Oceans,<br>
+                Discover the Web of Life!</h2>
+            <button onclick="location.href='signup.html'" class="signup-btn">Sign Up</button>
+        </div>
+        <div class="slideshow">
+            <div class="slides">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="slides">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="slides">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+            <div class="slides">
+                <img src="image4.jpg" alt="Image 4">
+            </div>
+        </div>
+    </section>
+</main>
+
+
+<body>
+    <div class="footer">
+        <p>&copy; 2024 Conservation Biology</p>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 2000); 
+        }
+    </script>
+</body>
+
+<style>
+    body {
+        background-image: url(background1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Montserrat';
+        position: sticky;
+        top: 0;
+        text-decoration: none;
+    }
+
+    #about, #conservationBio, #sources, #home, #signin {
+        position: relative;
+    }
+
+    #sources:after, #conservationBio:after, #about:after, #home:after, #signin:after {
+        content: '';
+        height: 6.3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #002D04;
+        transition: 0.5s;
+    }
+
+    #sources:hover:after, #conservationBio:hover:after, #about:hover:after, #home:hover:after, #signin:hover:after {
+        width: 100%;
+    }
+
+    li {
+        display: inline;
+        float: right;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    li a {
+        margin-right: 30px;
+        padding-top: 20px;
+        color: rgb(0, 0, 0);
+        border: 1px;
+        float: right;
+        text-decoration: none;
+    }
+
+    .logo {
+        border: 1px;
+        padding-right: 5px;
+        height: 65px;
+        float: left;
+        margin-top: -40px;
+        margin-left: 20px;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        margin: 120px 120px 50px auto;
+        max-width: 1200px;
+        padding: 20px;
+        flex-wrap: wrap;
+    }
+
+    .web-of-life {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .web-of-life .text {
+        flex: 1;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 20px;
+        border-radius: 10px;
+        margin-right: 20px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .web-of-life .text h2 {
+        font-size: 61px;
+        font-family: 'Oswald';
+    }
+
+    .web-of-life .signup-btn {
+        display: block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 18px;
+        color: #fff;
+        background-color: #002D04;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        position: right;
+        z-index: 1;
+        align-self: flex-end;
+        margin-right: 20px;
+    }
+
+    .web-of-life .slideshow {
+        flex: 1;
+        text-align: right;
+        max-width: 100%;
+        margin-left: 20px;
+    }
+
+    .web-of-life .slideshow img {
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+
+    .slides {
+        display: none;
+    }
+
+    h1 {
+        float: left;
+        margin-top: -38px;
+        border: 1px;
+        font-family: 'Montserrat';
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        font-weight: lighter;
+    }
+
+    nav {
+        overflow: hidden;
+        width: 100%;
+        position: fixed;
+        margin-left: -8px;
+        top: 0px;
+        height: 99px;
+        background: linear-gradient(180deg, rgba(159,255,132,0.9136904761904762) 0%, rgba(196,255,120,1) 0%, rgba(67,176,65,1) 91%);
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(159,255,132,0.9136904761904762) 0%, rgba(196,255,120,1) 0%, rgba(67,176,65,1) 91%);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        fill-opacity: inherit;
+        font-family: 'Montserrat';
+    }
+</style>
+
+</html>

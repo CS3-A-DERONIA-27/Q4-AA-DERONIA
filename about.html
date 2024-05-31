@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Conservation Biology">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Deronia - Lithium">
+    <meta name="viewport" content="">
+
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+</head>
+
+<header>
+    <nav>
+        <ul>
+            <li><a id="about" href="about.html">About us</a></li>
+            <li><a id="conservationBio" href="understanding.html">Understanding Conservation Biology</a></li>
+            <li><a id="sources" href="sources.html"> Sources </a></li>
+            <li><a id="home" href="index.html">Home</a></li> 
+        </ul>
+
+        <img src="logo.png" alt="" class="logo">
+
+        <h1> Republic of the Philippines <br>
+            Conservation Biology <br>
+            Protecting biodiversity and ecosystems.
+        </h1>
+    </nav>
+</header>
+
+<main class="container1">
+    <section class="bio1">
+        <h2>Wildlife Sanctuaries</h2>
+        <p>
+            Wildlife Sanctuaries are protected areas meant only for the conservation of wild animals. A few human activities such as cultivation, 
+            wood collection, and other forest product collection are allowed here, but they must not interfere with the conservation of the animals. 
+            Tourist visits are also allowed in these areas. There are a total of 551 wildlife sanctuaries in India. These are the places where only 
+            wild animals can be found. Certain human activities like timber harvesting, cultivation, collection of woods, and other forest products 
+            are permitted unless they interfere with the conservation project. Recreation tourism is also permitted.
+        </p>
+
+        <h2> Biodiversity Hotspots</h2>
+        <p>
+            A biodiversity hotspot are the areas of conservation where there is strictly a minimum of 1500 species of vascular plants and a habitat 
+            that has lost its 70% cover. These are protected areas for various purposes where the wildlife, inhabitant lifestyle, and domesticated 
+            plants and animals are conserved. Tourist and research activities are allowed.
+        </p>
+
+        <h2> Ex Situ Conservation</h2>
+        <p>
+            Ex Situ Conservation means conservation of life outside their natural habitat or place of occurrence. It is the method in which part of 
+            the population or the entire endangered species is taken from its natural habitat which is threatened and breeding and maintaining of 
+            these species take place in artificial ecosystems. These artificial ecosystems could be zoos, nurseries, botanical gardens, etc. 
+            The living environments are altered in these conservation sites, so there are fewer survival struggles like scarcity of food, water, or space.
+        </p>
+    </section>
+    
+<body>
+    <div class="footer">
+        <p>&copy; 2024 Conservation Biology</p>
+    </div>
+
+</body>
+
+<script>
+    alert("HELLO!!");
+</script>
+
+
+<style>
+    body {
+        background-image: url(background4.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: 'Montserrat';
+        position: sticky;
+        top: 0;
+        text-decoration: none;
+    }
+
+    #about{
+        position: relative;
+        text-decoration: underline;
+    }
+    
+    #conservationBio, #about, #home, #signin {
+        position: relative;
+    }
+
+    #sources:after, #conservationBio:after, #about:after, #home:after, #signin:after {
+        content: '';
+        height: 6.3px;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        background-color: #002D04;
+        transition: 0.5s;
+    }
+
+    #sources:hover:after, #conservationBio:hover:after, #about:hover:after, #home:hover:after, #signin:hover:after {
+        width: 100%;
+    }
+
+    li {
+        display: inline;
+        float: right;
+        margin-top: 20px;
+        font-size: 15px;
+    }
+
+    li a {
+        margin-right: 30px;
+        padding-top: 20px;
+        color: rgb(0, 0, 0);
+        border: 1px;
+        float: right;
+        text-decoration: none;
+    }
+
+    .logo {
+        border: 1px;
+        padding-right: 5px;
+        height: 65px;
+        float: left;
+        margin-top: -40px;
+        margin-left: 20px;
+    }
+
+    .container1 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 100px auto;
+        max-width: 1200px;
+        padding: 20px;
+    }
+
+    .bio1 {
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        font-size: 25px;
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+        margin-top: -15px;
+        margin-right: 250px;
+        text-align: justify;
+    }
+    
+    h1 {
+        float: left;
+        margin-top: -38px;
+        border: 1px;
+        font-family: 'Montserrat';
+        font-size: 15px;
+        color: rgb(0, 0, 0);
+        font-weight: lighter;
+    }
+
+    nav {
+        overflow: hidden;
+        width: 100%;
+        position: fixed;
+        margin-left: -8px;
+        top: 0px;
+        height: 99px;
+        z-index: 1000;
+        background: linear-gradient(180deg, rgba(159,255,132,0.9136904761904762) 0%, rgba(196,255,120,1) 0%, rgba(67,176,65,1) 91%);
+    }
+
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: linear-gradient(180deg, rgba(159,255,132,0.9136904761904762) 0%, rgba(196,255,120,1) 0%, rgba(67,176,65,1) 91%);
+        color: rgb(0, 0, 0);
+        text-align: center;
+        fill-opacity: inherit;
+        z-index: 1000;
+        font-family: 'Montserrat';
+    }
+
+</style>
+
+</html>
